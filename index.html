@@ -1,28 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dante Sanaei</title>
   <style>
-    body {
-      font-family: -apple-system, Arial, sans-serif;
-      max-width: 700px;
-      margin: 80px auto;
-      line-height: 1.6;
-      padding: 0 20px;
+    :root {
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --link: #1f4f8a;
+      --link-hover: #163a66;
     }
-    h1 { margin-bottom: 0; }
-    .subtitle { color: #666; margin-top: 5px; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrapper {
+      max-width: 980px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 44px 48px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+
+    .headshot {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 8px;
+      display: block;
+      object-fit: cover;
+      border: 1px solid var(--line);
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin: 0 0 12px 0;
+    }
+
+    .intro p {
+      margin: 0;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    section {
+      padding-top: 28px;
+      margin-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    section h2 {
+      font-size: 2.1rem;
+      margin: 0 0 18px 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 28px;
+    }
+
+    li {
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    .publication {
+      font-weight: 500;
+    }
+
+    .placeholder {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .contact-links p {
+      margin: 8px 0;
+      font-size: 1.15rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 32px;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 760px) {
+      .card {
+        padding: 28px 22px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .headshot {
+        max-width: 240px;
+      }
+
+      .intro h2,
+      section h2 {
+        font-size: 1.7rem;
+      }
+
+      li,
+      .intro p,
+      .contact-links p {
+        font-size: 1.05rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Dante Sanaei</h1>
-  <p class="subtitle">Aerospace engineer · Space autonomy · Writing</p>
-  <p>I work on mission software, spacecraft autonomy, and space systems.</p>
-  <p>
-    <a href="https://github.com/dasanaei">GitHub</a> |
-    <a href="https://www.linkedin.com/">LinkedIn</a>
-  </p>
+  <div class="wrapper">
+    <div class="card">
+      <header>
+        <h1>Dante Sanaei</h1>
+      </header>
+
+      <div class="hero">
+        <!-- Replace headshot.jpg with your actual image filename -->
+        <img src="headshot.jpg" alt="Portrait of Dante Sanaei" class="headshot" />
+
+        <div class="intro">
+          <h2>Essays and Commentary</h2>
+          <p>
+            A collection of published commentary and essays on space, technology, and public life.
+          </p>
+        </div>
+      </div>
+
+      <section>
+        <h2>Published Work</h2>
+        <ul>
+          <li>
+            <span class="publication">Boston Globe</span> —
+            <a href="https://www.bostonglobe.com/2026/03/11/opinion/drones-xbat-mbta-advertising-defense/?s_campaign=8315:varf" target="_blank" rel="noopener noreferrer">
+              Why Are Military Drone Ads Showing Up in Boston Subway Stations?
+            </a>
+          </li>
+          <li>
+            <span class="publication">The Space Review</span> —
+            <a href="https://www.thespacereview.com/article/5180/1" target="_blank" rel="noopener noreferrer">
+              If China returns to the Moon first, will Americans care?
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Other Essays</h2>
+        <p class="placeholder">More essays coming soon.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/dante-sanaei/" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/dante-sanaei
+            </a>
+          </p>
+          <p>
+            Email:
+            <a href="mailto:dantesanaei@gmail.com">dantesanaei@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        © 2026 Dante Sanaei
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
